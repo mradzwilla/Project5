@@ -36,7 +36,14 @@ class ViewController: UITableViewController {
 
     func startGame() {
         allWords = GKRandomSource.sharedRandom().arrayByShufflingObjects(in: allWords) as! [String]
-        title = allWords[0]
+        
+        if title == nil{
+            title = allWords[0]
+        } else {
+            let currentWordIndex = allWords.index(of: title!)!
+            title = allWords[currentWordIndex + 1]
+        }
+        
         usedWords.removeAll(keepingCapacity: true)
         tableView.reloadData()
     }
@@ -69,6 +76,16 @@ class ViewController: UITableViewController {
         let errorTitle: String
         let errorMessage: String
         
+        if lowerAnswer == title {
+            returnErrorMessage(alertTitle: "That's the same word...", message: "That's a little too easy")
+            return
+        }
+        
+        if lowerAnswer.characters.count < 3 {
+            returnErrorMessage(alertTitle: "Word Too Short", message: "Please make your word at least 3 letters long!")
+            return
+        }
+        
         if isPossible(word: lowerAnswer) {
             if isOriginal(word: lowerAnswer) {
                 if isReal(word: lowerAnswer) {
@@ -89,11 +106,9 @@ class ViewController: UITableViewController {
         } else {
             errorTitle = "Word not possible"
             errorMessage = "You can't spell that word from '\(title!.lowercased())'!"
+            return
         }
-        
-        let ac = UIAlertController(title: errorTitle, message: errorMessage, preferredStyle: .alert)
-        ac.addAction(UIAlertAction(title: "OK", style: .default))
-        present(ac, animated: true)
+        returnErrorMessage(alertTitle: errorTitle, message: errorMessage)
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -131,5 +146,12 @@ class ViewController: UITableViewController {
         
         return misspelledRange.location == NSNotFound
     }
+    
+    func returnErrorMessage(alertTitle: String, message: String){
+        let ac = UIAlertController(title: alertTitle, message: message, preferredStyle: .alert)
+        ac.addAction(UIAlertAction(title: "OK", style: .default))
+        present(ac, animated: true)
+    }
+
 }
 

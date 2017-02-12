@@ -45,7 +45,9 @@
                         </connections>
                     </tableView>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="wi1-x8-SfI"/>
+                    <navigationItem key="navigationItem" id="wi1-x8-SfI">
+                        <nil key="title"/>
+                    </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="klg-xZ-O27" userLabel="First Responder" sceneMemberID="firstResponder"/>
