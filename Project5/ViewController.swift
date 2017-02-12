@@ -41,6 +41,14 @@ class ViewController: UITableViewController {
         tableView.reloadData()
     }
     
+    @IBAction func newWord(_ sender: UIButton) {
+        startGame()
+        
+        let newWordAlert = UIAlertController(title: "New Word", message: "Your new word is \(title!)", preferredStyle: .alert)
+        newWordAlert.addAction(UIAlertAction(title: "OK", style: .default))
+        present(newWordAlert, animated: true)
+
+    }
     func promptForAnswer() {
         let ac = UIAlertController(title: "Enter answer", message: nil, preferredStyle: .alert)
         ac.addTextField()
