@@ -12,6 +12,7 @@
 		274104F31E4FF28500509840 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 274104F11E4FF28500509840 /* Main.storyboard */; };
 		274104F51E4FF28500509840 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 274104F41E4FF28500509840 /* Assets.xcassets */; };
 		274104F81E4FF28500509840 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 274104F61E4FF28500509840 /* LaunchScreen.storyboard */; };
+		274105001E4FF8D900509840 /* start.txt in Resources */ = {isa = PBXBuildFile; fileRef = 274104FF1E4FF8D900509840 /* start.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		274104F41E4FF28500509840 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		274104F71E4FF28500509840 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		274104F91E4FF28500509840 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		274104FF1E4FF8D900509840 /* start.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = start.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 		274104EC1E4FF28400509840 /* Project5 */ = {
 			isa = PBXGroup;
 			children = (
+				274104FF1E4FF8D900509840 /* start.txt */,
 				274104ED1E4FF28400509840 /* AppDelegate.swift */,
 				274104EF1E4FF28400509840 /* ViewController.swift */,
 				274104F11E4FF28500509840 /* Main.storyboard */,
@@ -124,6 +127,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				274104F81E4FF28500509840 /* LaunchScreen.storyboard in Resources */,
+				274105001E4FF8D900509840 /* start.txt in Resources */,
 				274104F51E4FF28500509840 /* Assets.xcassets in Resources */,
 				274104F31E4FF28500509840 /* Main.storyboard in Resources */,
 			);
